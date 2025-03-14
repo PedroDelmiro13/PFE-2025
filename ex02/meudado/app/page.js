@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Dado from './components/Dado';
+import './page.css';  
 
 const Page = () => {  
   const [valorDado, setValorDado] = useState(1);

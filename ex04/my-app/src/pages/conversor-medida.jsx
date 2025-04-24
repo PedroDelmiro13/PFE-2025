@@ -67,22 +67,22 @@ const Medida = () => {
                     <option value="pesEPolegadasParaMetro">Pés e Polegadas para Metros</option>
                 </select>
 
-                {tipoConversaoM === "metroParaPesEPolegadas" && (
-                    <div>
+                
+                    <div className='flex flex-col space-y-4'>
                         <label htmlFor="valorMetro" className="text-black text-lg font-semibold">
                             Metros:
                         </label>
                         <input
                             type="number"
                             id="valorMetro"
-                            placeholder="Digite o valor em metros"
+                            value={metro}
                             onChange={(e) => setValorInputM(parseFloat(e.target.value) || 0)}
                             className="px-4 py-2 border border-gray-300 rounded-xl text-black w-64"
                         />
                     </div>
-                )}
+                
 
-                {tipoConversaoM === "pesEPolegadasParaMetro" && (
+                
                     <div className='flex flex-col space-y-4'>
                         <label htmlFor="valorPes" className="text-black text-lg font-semibold">
                             Pés:
@@ -90,7 +90,6 @@ const Medida = () => {
                         <input
                             type="number"
                             id="valorPes"
-                            placeholder="Digite os pés"
                             value={pes}
                             onChange={(e) => setPes(parseFloat(e.target.value) || 0)}
                             className="px-4 py-2 border border-gray-300 rounded-xl text-black w-64"
@@ -101,18 +100,11 @@ const Medida = () => {
                         <input
                             type="number"
                             id="valorPolegadas"
-                            placeholder="Digite as polegadas"
                             value={polegadas}
                             onChange={(e) => setPolegadas(parseFloat(e.target.value) || 0)}
                             className="px-4 py-2 border border-gray-300 rounded-xl text-black w-64"
                         />
                     </div>
-                )}
-                <p className="text-xl text-black font-semibold mt-4">
-                Resultado: {tipoConversaoM === "metroParaPesEPolegadas"
-                    ? `${pes} pés e ${polegadas.toFixed(2)} polegadas`
-                    : `${metro.toFixed(2)} metros`}
-                </p>
             </div>
         </div>
     </div>

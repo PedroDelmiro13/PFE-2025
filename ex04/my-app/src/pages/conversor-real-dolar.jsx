@@ -8,7 +8,7 @@ const Moeda = () => {
     const [dolar, setDolar] = useState(0);
     const [cotacaoCompra, setCotacaoCompra] = useState(5.8419);
     const [cotacaoVenda, setCotacaoVenda] = useState(5.8425)
-    const [tipoConversao, setTipoConversao] = useState("realParaDolar")
+    const [tipoConversao, setTipoConversao] = useState('')
     const [valorInput, setValorInput] = useState(0);
     
 
@@ -49,6 +49,7 @@ const Moeda = () => {
           value={tipoConversao}
           onChange={(e) => setTipoConversao(e.target.value)}
         >
+          <option value="">Selecione uma opção</option> 
           <option value="realParaDolar">Real para Dólar</option>
           <option value="dolarParaReal">Dólar para Real</option>
         </select>

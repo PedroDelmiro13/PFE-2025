@@ -7,7 +7,7 @@ const Temperatura = () => {
     const[celsius, setCelsius] = useState(0);
     const[kelvin, setKelvin] = useState(0);
     const[fahrenheint, setFahrenheint] = useState(0);
-    const[tipoConversaoT, setTipoConversaoT] = useState('celsiusParaFahrenheint')
+    const[tipoConversaoT, setTipoConversaoT] = useState('')
     const[valorInputT, setValorInputT] = useState(0);
 
     const converterCelsiusParaFahrenheint = (valor) =>{
@@ -73,6 +73,7 @@ const Temperatura = () => {
   value={tipoConversaoT}
   onChange={(e) => setTipoConversaoT(e.target.value)}
 >
+  <option value="">Selecione uma opção</option>     
   <option value="celsiusParaFahrenheint">Celsius para Fahrenheint</option>
   <option value="celsiusParaKelvin">Celsius para Kelvin</option>
   <option value="fahrenheintParaCelsius">Fahrenheint para Celsius</option>
@@ -87,7 +88,7 @@ const Temperatura = () => {
           type="number"
           id="valor"
           placeholder="Digite o valor"
-          onChange={(e) => setValorInputT(parseFloat(e.target.value))}
+          onChange={(e) => setValorInputT(parseFloat(e.target.value)|| 0)}
           className="px-4 py-2 border border-gray-300 rounded-xl text-black w-64"
         />
         

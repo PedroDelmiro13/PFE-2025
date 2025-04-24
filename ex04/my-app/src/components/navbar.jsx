@@ -7,7 +7,7 @@ export default function Navbar(){
         <Link href="/sobre" className='hover:text-blue-400 transition duration-300'>Sobre</Link>
         <Link href="/conversor-real-dolar" className='hover:text-blue-400 transition duration-300'>Moeda</Link>
         <Link href="/conversor-temperatura" className='hover:text-blue-400 transition duration-300'>Temperatura</Link>
-        <Link href="/conversor-comprimento" className='hover:text-blue-400 transition duration-300'>Medida</Link>
+        <Link href="/conversor-medida" className='hover:text-blue-400 transition duration-300'>Medida</Link>
         </nav>
     )
 }
